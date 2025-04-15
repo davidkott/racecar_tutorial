@@ -8,7 +8,7 @@ source $HOME/.bashrc || source $HOME/.zshrc
 conda create --name alphafold32 python=3.11.11 -y
 source $HOME/miniconda/bin/activate alphafold32
 conda activate alphafold32
-conda install -c conda-forge gcc gxx cmake -y
+conda install -c conda-forge gcc gxx cmake  zlib zlib-static -y
 export LD_LIBRARY_PATH="\$CONDA_PREFIX/lib:\$CONDA_PREFIX/lib/gcc/x86_64-conda-linux-gnu/14.2.0:\$CONDA_PREFIX/x86_64-conda-linux-gnu/lib:\$LD_LIBRARY_PATH"
 mkdir -p $HOME/hmmer_build $HOME/hmmer
 wget http://eddylab.org/software/hmmer/hmmer-3.4.tar.gz -P $HOME/hmmer_build
@@ -23,7 +23,7 @@ git clone https://github.com/google-deepmind/alphafold3.git
 cd alphafold3
 pip3 install -r dev-requirements.txt
 pip3 install --no-deps .
-
+mv $HOME/racecar_tutorial/sample.json ./
 
 # Append the variables to the end of .bashrc
 cat <<EOF >> $HOME/.bashrc
