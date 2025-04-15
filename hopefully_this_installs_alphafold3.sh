@@ -5,6 +5,7 @@ bash miniconda.sh -b -p $HOME/miniconda
 cd ~
 conda create --name alphafold32 python=3.11.11 -y
 conda init
+source ~/.bashrc 
 conda activate alphafold32
 conda install -c conda-forge gcc gxx cmake -y
 export LD_LIBRARY_PATH="\$CONDA_PREFIX/lib:\$CONDA_PREFIX/lib/gcc/x86_64-conda-linux-gnu/14.2.0:\$CONDA_PREFIX/x86_64-conda-linux-gnu/lib:\$LD_LIBRARY_PATH"
@@ -18,7 +19,7 @@ cd ~/hmmer_build/hmmer-3.4/easel && make install
 rm -r ~/hmmer_build
 cd ~
 git clone https://github.com/google-deepmind/alphafold3.git
-cd alphafold2
+cd alphafold3
 pip3 install -r dev-requirements.txt
 pip3 install --no-deps .
 
