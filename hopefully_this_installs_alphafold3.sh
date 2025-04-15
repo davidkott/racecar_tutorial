@@ -27,6 +27,7 @@ git clone https://github.com/google-deepmind/alphafold3.git
 cd alphafold3
 pip3 install -r dev-requirements.txt
 pip3 install --no-deps .
+build_data
 mkdir output
 mkdir cache
 mv $HOME/racecar_tutorial/sample.json ./
