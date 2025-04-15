@@ -10,7 +10,10 @@ conda activate alphafold32
 conda install -c conda-forge gcc gxx cmake  zlib -y
 export LD_LIBRARY_PATH="\$CONDA_PREFIX/lib:\$CONDA_PREFIX/lib/gcc/x86_64-conda-linux-gnu/14.2.0:\$CONDA_PREFIX/x86_64-conda-linux-gnu/lib:\$LD_LIBRARY_PATH"
 export CPPFLAGS="-I$CONDA_PREFIX/include"
+export CFLAGS="-I$CONDA_PREFIX/include"
+export CXXFLAGS="-I$CONDA_PREFIX/include"
 export LDFLAGS="-L$CONDA_PREFIX/lib"
+export PKG_CONFIG_PATH="$CONDA_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
 mkdir -p $HOME/hmmer_build $HOME/hmmer
 wget http://eddylab.org/software/hmmer/hmmer-3.4.tar.gz -P $HOME/hmmer_build
 cd $HOME/hmmer_build && tar zxf hmmer-3.4.tar.gz && rm hmmer-3.4.tar.gz
