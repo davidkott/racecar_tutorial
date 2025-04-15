@@ -5,8 +5,8 @@ bash miniconda.sh -b -p $HOME/miniconda
 source $HOME/miniconda/bin/activate  # Ensures Conda is in the current session
 conda init
 source $HOME/.bashrc || source $HOME/.zshrc  
-conda create --name alphafold32 python=3.11.11 -y
-conda activate alphafold32
+conda create --name alphafold3 python=3.11.11 -y
+conda activate alphafold3
 conda install -c conda-forge gcc gxx cmake  zlib -y
 export LD_LIBRARY_PATH="\$CONDA_PREFIX/lib:\$CONDA_PREFIX/lib/gcc/x86_64-conda-linux-gnu/14.2.0:\$CONDA_PREFIX/x86_64-conda-linux-gnu/lib:\$LD_LIBRARY_PATH"
 export CPPFLAGS="-I$CONDA_PREFIX/include"
