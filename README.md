@@ -107,7 +107,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 Once that is taken care of go into the alphafold3 folder to do what ever ya gotta do
 ```bash
-cd alphafold3/
+cd $HOME/alphafold3/
 ```
 
 To check the progress of a run you've already launched use the cat command after you use cd to get into the alphafold3 folder.
