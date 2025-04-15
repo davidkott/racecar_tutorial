@@ -4,6 +4,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O mi
 bash miniconda.sh -b -p $HOME/miniconda
 cd ~
 conda create --name alphafold32 python=3.11.11 -y
+conda init
 conda activate alphafold32
 conda install -c conda-forge gcc gxx cmake -y
 export LD_LIBRARY_PATH="\$CONDA_PREFIX/lib:\$CONDA_PREFIX/lib/gcc/x86_64-conda-linux-gnu/14.2.0:\$CONDA_PREFIX/x86_64-conda-linux-gnu/lib:\$LD_LIBRARY_PATH"
